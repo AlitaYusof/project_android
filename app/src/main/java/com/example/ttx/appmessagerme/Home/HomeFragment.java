@@ -38,6 +38,7 @@ public class HomeFragment extends Fragment {
                 ((AppCompatActivity) context).getSupportFragmentManager()
                         .beginTransaction()
                         .replace(R.id.container, new StartPointFragment()) //
+                        .addToBackStack(null)
                         .commit();
             }
         });
@@ -48,6 +49,7 @@ public class HomeFragment extends Fragment {
                 ((AppCompatActivity) context).getSupportFragmentManager()
                         .beginTransaction()
                         .replace(R.id.container, new EndPointFragment()) //
+                        .addToBackStack(null)
                         .commit();
             }
         });
