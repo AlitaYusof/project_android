@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.ttx.appmessagerme.R;
+import com.example.ttx.appmessagerme.User.ShowoderFragment;
 import com.example.ttx.appmessagerme.databinding.FragmentHomeBinding;
 
 /**
@@ -54,6 +55,16 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        binding.btnPost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((AppCompatActivity) context).getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.container, new ShowoderFragment()) //
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
         return binding.getRoot();
     }
 
