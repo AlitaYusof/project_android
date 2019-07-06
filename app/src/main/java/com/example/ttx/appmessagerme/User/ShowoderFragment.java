@@ -1,6 +1,7 @@
 package com.example.ttx.appmessagerme.User;
 
 
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
@@ -11,12 +12,16 @@ import android.widget.Button;
 
 import com.example.ttx.appmessagerme.Driver.ComfirmFragment;
 import com.example.ttx.appmessagerme.R;
+import com.example.ttx.appmessagerme.databinding.FragmentShowoderBinding;
+
+import java.util.Calendar;
+import java.util.Date;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class ShowoderFragment extends Fragment {
-
+    private FragmentShowoderBinding binding;
 
     public ShowoderFragment() {
         // Required empty public constructor
@@ -28,30 +33,31 @@ public class ShowoderFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        View view = inflater.inflate(R.layout.fragment_showoder, container, false);
-        Button textTitle =view.findViewById(R.id.btn_cf_all);
-        textTitle.setOnClickListener(new View.OnClickListener() {
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_showoder, container, false);
+        binding.btnCfAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((AppCompatActivity)getContext()).getSupportFragmentManager()
+                ((AppCompatActivity) getContext()).getSupportFragmentManager()
                         .beginTransaction()
-                        .replace(R.id.container,new ComfirmFragment())
+                        .replace(R.id.container, new ComfirmFragment())
                         .addToBackStack(null) //เก็บค่าก่อนหน้าเพื่อย้อนกลับ
                         .commit();
             }
         });
-        Button button =view.findViewById(R.id.button4);
-        button.setOnClickListener(new View.OnClickListener() {
+        binding.button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            getFragmentManager().popBackStack();
+                getFragmentManager().popBackStack();
             }
         });
-        return view;
+
+        Date currentTime = Calendar.getInstance().getTime();
+
+        binding.textDate.setText(""+currentTime.getHours()+":"+currentTime.getMinutes()+":"+currentTime.getSeconds());
+
+
+        return binding.getRoot();
     }
-
-
-
 
 
 }

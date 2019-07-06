@@ -2,8 +2,8 @@ package com.example.ttx.appmessagerme.Model;
 
 public class Startpoint {
     static String namepoit;
-    double lat;
-    double log;
+    static double lat;
+    static double log;
 
     public static String getNamepoit() {
         return namepoit;
@@ -13,7 +13,7 @@ public class Startpoint {
         this.namepoit = namepoit;
     }
 
-    public double getLat() {
+    public static double getLat() {
         return lat;
     }
 
@@ -21,7 +21,7 @@ public class Startpoint {
         this.lat = lat;
     }
 
-    public double getLog() {
+    public static double getLog() {
         return log;
     }
 

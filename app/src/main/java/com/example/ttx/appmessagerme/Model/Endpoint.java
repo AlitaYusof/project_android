@@ -2,10 +2,10 @@ package com.example.ttx.appmessagerme.Model;
 
 public class Endpoint {
     static String namepoit;
-    double lat;
-    double log;
+    static double lat;
+    static double log;
 
-    public double getLat() {
+    public static double getLat() {
         return lat;
     }
 
@@ -13,7 +13,7 @@ public class Endpoint {
         this.lat = lat;
     }
 
-    public double getLog() {
+    public static double getLog() {
         return log;
     }
 

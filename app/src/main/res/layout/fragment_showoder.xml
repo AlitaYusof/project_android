@@ -20,7 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <EditText
+                <TextView
                     android:id="@+id/text_date"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -28,20 +28,18 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
                     android:ems="10"
-                    android:inputType="date"
                     app:layout_constraintEnd_toStartOf="@+id/editText"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="MissingConstraints" />
 
-                <EditText
+                <TextView
                     android:id="@+id/editText"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:layout_marginRight="8dp"
                     android:ems="10"
-                    android:inputType="time"
                     app:layout_constraintBottom_toBottomOf="@+id/text_date"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/text_date"
@@ -79,7 +77,7 @@
                     android:text="Name"
                     app:layout_constraintBottom_toBottomOf="@+id/textView_poi2"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textView_poi2"
+                    app:layout_constraintStart_toStartOf="@+id/textpoi1"
                     app:layout_constraintTop_toTopOf="@+id/textView_poi2"
                     app:layout_constraintVertical_bias="1.0"
                     tools:ignore="MissingConstraints" />
@@ -116,7 +114,8 @@
                     android:id="@+id/editText9"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginRight="8dp"
                     android:ems="10"
@@ -124,8 +123,8 @@
                     android:text="พัสดุ"
                     app:layout_constraintBottom_toBottomOf="@+id/text_icon"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/text_icon"
-                    app:layout_constraintTop_toBottomOf="@+id/textpoi2"
+                    app:layout_constraintStart_toStartOf="@+id/textpoi2"
+                    app:layout_constraintTop_toTopOf="@+id/text_icon"
                     tools:ignore="MissingConstraints" />
 
                 <EditText
@@ -134,15 +133,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
                     android:ems="10"
                     android:inputType="textPersonName"
                     android:text="เงินสด"
                     app:layout_constraintBottom_toBottomOf="@+id/text_icon2"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.503"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/editText9"
                     app:layout_constraintTop_toTopOf="@+id/text_icon2"
                     tools:ignore="MissingConstraints" />
 

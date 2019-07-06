@@ -56,15 +56,25 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        boolean valid = true;
 
         if (Startpoint.getNamepoit() != null) {
+            valid = true;
             binding.btnStartpoint.setText(Startpoint.getNamepoit());
+        } else {
+            valid = false;
         }
 
         if (Endpoint.getNamepoit() != null) {
+            valid = true;
             binding.btnEntpoin.setText(Endpoint.getNamepoit());
+        } else {
+            valid = false;
         }
 
+        if (valid) {
+            binding.textPrice.setText("ราคา " + ((Endpoint.getLat() - Endpoint.getLog()) - (Startpoint.getLat() - Startpoint.getLog())) + " บาท");
+        }
         return binding.getRoot();
     }
 

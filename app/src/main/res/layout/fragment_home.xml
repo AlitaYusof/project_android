@@ -76,42 +76,13 @@
                     app:layout_constraintTop_toBottomOf="@+id/chk_goback" />
 
                 <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:text="ราคา"
-                    app:layout_constraintBottom_toTopOf="@+id/btn_post"
-                    app:layout_constraintEnd_toStartOf="@+id/text_price"
-                    app:layout_constraintHorizontal_chainStyle="spread_inside"
-                    app:layout_constraintStart_toStartOf="parent" />
-
-                <TextView
                     android:id="@+id/text_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
                     android:text="0"
                     app:layout_constraintBottom_toTopOf="@+id/btn_post"
-                    app:layout_constraintEnd_toStartOf="@+id/textView5"
-                    app:layout_constraintStart_toEndOf="@+id/textView3" />
-
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:text="บาท"
-                    app:layout_constraintBottom_toTopOf="@+id/btn_post"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/text_price" />
+                    app:layout_constraintStart_toStartOf="parent" />
 
                 <CheckBox
                     android:id="@+id/chk_goback"
