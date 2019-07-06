@@ -29,8 +29,8 @@
                     android:layout_marginEnd="8dp"
                     android:layout_marginRight="8dp"
                     android:ems="10"
+                    android:hint="ชื่อสถานที่"
                     android:inputType="textPersonName"
-                    android:text="ชื่อสถานที่"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.562"
                     app:layout_constraintStart_toStartOf="parent"
@@ -42,8 +42,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:ems="10"
+                    android:hint="ละติจูด"
                     android:inputType="textPersonName"
-                    android:text="ละติจูด"
                     app:layout_constraintStart_toStartOf="@+id/edit_namestart"
                     app:layout_constraintTop_toBottomOf="@+id/edit_namestart" />
 
@@ -53,8 +53,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:ems="10"
+                    android:hint="ลองจิจูด"
                     android:inputType="textPersonName"
-                    android:text="ลองจิจูด"
                     app:layout_constraintStart_toStartOf="@+id/edit_lat"
                     app:layout_constraintTop_toBottomOf="@+id/edit_lat" />
 

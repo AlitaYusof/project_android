@@ -122,23 +122,27 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginRight="8dp"
+                    android:focusable="auto"
                     android:text="ไป - กลับ"
+                    android:buttonTint="@color/colorPrimary"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/btn_Entpoin"
-                    tools:ignore="MissingConstraints" />
+                    app:layout_constraintTop_toBottomOf="@+id/btn_Entpoin" />
 
                 <CheckBox
                     android:id="@+id/chk_peper"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:buttonTint="@color/colorPrimary"
                     android:layout_marginTop="8dp"
+                    android:focusable="auto"
                     android:text="เอกสาร"
                     app:layout_constraintStart_toStartOf="@+id/textView2"
                     app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
                 <CheckBox
                     android:id="@+id/chk_parcel"
+                    android:buttonTint="@color/colorPrimary"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -150,6 +154,7 @@
                     android:id="@+id/chk_food"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:buttonTint="@color/colorPrimary"
                     android:layout_marginTop="8dp"
                     android:text="อาหาร"
                     app:layout_constraintStart_toStartOf="@+id/chk_parcel"

@@ -1,7 +1,7 @@
 package com.example.ttx.appmessagerme.Model;
 
 public class Endpoint {
-    String namepoit;
+    static String namepoit;
     double lat;
     double log;
 
@@ -21,7 +21,7 @@ public class Endpoint {
         this.log = log;
     }
 
-    public String getNamepoit() {
+    public static String getNamepoit() {
         return namepoit;
     }
 

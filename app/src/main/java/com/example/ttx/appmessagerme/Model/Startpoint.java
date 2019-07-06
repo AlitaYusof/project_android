@@ -1,11 +1,11 @@
 package com.example.ttx.appmessagerme.Model;
 
 public class Startpoint {
-    String namepoit;
+    static String namepoit;
     double lat;
     double log;
 
-    public String getNamepoit() {
+    public static String getNamepoit() {
         return namepoit;
     }
 

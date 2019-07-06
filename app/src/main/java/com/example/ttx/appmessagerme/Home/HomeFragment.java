@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.ttx.appmessagerme.Model.Endpoint;
+import com.example.ttx.appmessagerme.Model.Startpoint;
 import com.example.ttx.appmessagerme.R;
 import com.example.ttx.appmessagerme.databinding.FragmentHomeBinding;
 
@@ -53,6 +55,14 @@ public class HomeFragment extends Fragment {
                         .commit();
             }
         });
+
+        if (Startpoint.getNamepoit() != null) {
+            binding.btnStartpoint.setText(Startpoint.getNamepoit());
+        }
+
+        if (Endpoint.getNamepoit() != null) {
+            binding.btnEntpoin.setText(Endpoint.getNamepoit());
+        }
 
         return binding.getRoot();
     }

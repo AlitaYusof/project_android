@@ -43,8 +43,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="ละติจูด"
+                android:inputType="number|textPersonName"
+                android:text="10.1531"
                 app:layout_constraintStart_toStartOf="@+id/edit_nameent"
                 app:layout_constraintTop_toBottomOf="@+id/edit_nameent" />
 
@@ -54,8 +54,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="ลองจิจูด"
+                android:inputType="number|textPersonName"
+                android:text="153.100581"
                 app:layout_constraintStart_toStartOf="@+id/edit_lat"
                 app:layout_constraintTop_toBottomOf="@+id/edit_lat" />
 
