@@ -49,6 +49,41 @@
                     app:layout_constraintVertical_bias="0.0"
                     tools:ignore="MissingConstraints" />
 
+                <EditText
+                    android:id="@+id/textpoi1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Name"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView_poi1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView_poi1"
+                    app:layout_constraintTop_toTopOf="@+id/textView_poi1"
+                    tools:ignore="MissingConstraints" />
+
+                <EditText
+                    android:id="@+id/textpoi2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Name"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView_poi2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView_poi2"
+                    app:layout_constraintTop_toTopOf="@+id/textView_poi2"
+                    app:layout_constraintVertical_bias="1.0"
+                    tools:ignore="MissingConstraints" />
+
                 <TextView
                     android:id="@+id/textView_poi1"
                     android:layout_width="wrap_content"
@@ -56,8 +91,10 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
                     android:text="จุดที่1"
-                    app:layout_constraintStart_toStartOf="@+id/text_date"
+                    app:layout_constraintBottom_toTopOf="@+id/textView_poi2"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/text_date"
                     tools:ignore="MissingConstraints" />
 
@@ -65,10 +102,48 @@
                     android:id="@+id/textView_poi2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
                     android:text="จุดที่2"
-                    app:layout_constraintStart_toStartOf="@+id/textView_poi1"
+                    app:layout_constraintBottom_toTopOf="@+id/text_icon"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView_poi1"
+                    tools:ignore="MissingConstraints" />
+
+                <EditText
+                    android:id="@+id/editText9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="พัสดุ"
+                    app:layout_constraintBottom_toBottomOf="@+id/text_icon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/text_icon"
+                    app:layout_constraintTop_toBottomOf="@+id/textpoi2"
+                    tools:ignore="MissingConstraints" />
+
+                <EditText
+                    android:id="@+id/editText10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="เงินสด"
+                    app:layout_constraintBottom_toBottomOf="@+id/text_icon2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.503"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/text_icon2"
                     tools:ignore="MissingConstraints" />
 
                 <EditText
@@ -77,12 +152,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
-                    android:layout_marginTop="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
                     android:ems="10"
                     android:inputType="textPersonName"
                     android:text="จุดชำระเงิน"
-                    app:layout_constraintStart_toStartOf="@+id/text_date"
-                    app:layout_constraintTop_toBottomOf="@+id/text_icon2"
+                    app:layout_constraintBottom_toTopOf="@+id/btn_cf_all"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editText10"
                     tools:ignore="MissingConstraints" />
 
                 <EditText
@@ -97,7 +174,7 @@
                     android:inputType="textPersonName"
                     android:text="  จุดที่2"
                     app:layout_constraintBottom_toBottomOf="@+id/editText11"
-                    app:layout_constraintEnd_toEndOf="@+id/editText"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/editText11"
                     app:layout_constraintTop_toTopOf="@+id/editText11"
                     tools:ignore="MissingConstraints" />
@@ -138,9 +215,13 @@
                     android:id="@+id/text_icon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
                     android:text="ใส่icon"
-                    app:layout_constraintStart_toStartOf="@+id/textView_poi2"
+                    app:layout_constraintBottom_toTopOf="@+id/text_icon2"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView_poi2"
                     tools:ignore="MissingConstraints" />
 
@@ -149,54 +230,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
                     android:text="ใส่icon"
-                    app:layout_constraintStart_toStartOf="@+id/text_icon"
+                    app:layout_constraintBottom_toTopOf="@+id/editText11"
                     app:layout_constraintTop_toBottomOf="@+id/text_icon"
-                    tools:ignore="MissingConstraints" />
-
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginLeft="32dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:text="TextView"
-                    app:layout_constraintBottom_toBottomOf="@+id/textView_poi1"
-                    app:layout_constraintEnd_toEndOf="@+id/editText"
-                    app:layout_constraintStart_toEndOf="@+id/textView_poi1"
-                    app:layout_constraintTop_toTopOf="@+id/textView_poi1" />
-
-                <TextView
-                    android:id="@+id/textView16"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="TextView"
-                    app:layout_constraintBottom_toBottomOf="@+id/textView_poi2"
-                    app:layout_constraintEnd_toEndOf="@+id/textView4"
-                    app:layout_constraintStart_toStartOf="@+id/textView4"
-                    app:layout_constraintTop_toTopOf="@+id/textView_poi2" />
-
-                <TextView
-                    android:id="@+id/textView18"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="TextView"
-                    app:layout_constraintBottom_toBottomOf="@+id/text_icon"
-                    app:layout_constraintEnd_toEndOf="@+id/textView16"
-                    app:layout_constraintStart_toStartOf="@+id/textView16"
-                    app:layout_constraintTop_toTopOf="@+id/text_icon" />
-
-                <TextView
-                    android:id="@+id/textView19"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="TextView"
-                    app:layout_constraintBottom_toBottomOf="@+id/text_icon2"
-                    app:layout_constraintEnd_toEndOf="@+id/textView18"
-                    app:layout_constraintStart_toStartOf="@+id/textView18"
-                    app:layout_constraintTop_toTopOf="@+id/text_icon2" />
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="8dp" />
             </android.support.constraint.ConstraintLayout>
         </android.support.v4.widget.NestedScrollView>
     </FrameLayout>
