@@ -56,6 +56,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
+
         if (Startpoint.getNamepoit() != null) {
             binding.btnStartpoint.setText(Startpoint.getNamepoit());
         }
