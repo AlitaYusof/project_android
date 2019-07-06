@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Driver.ShowprofileFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/carddri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/colorAccent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="94dp"
+                    android:layout_height="92dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.087"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/text_name_driv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="ชื่อ"
+                    app:layout_constraintEnd_toEndOf="@+id/text_id_drive"
+                    app:layout_constraintStart_toStartOf="@+id/text_id_drive"
+                    app:layout_constraintTop_toBottomOf="@+id/text_id_drive"
+                    tools:textSize="18sp" />
+
+
+                <TextView
+                    android:id="@+id/text_id_drive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ID :"
+                    tools:layout_editor_absoluteX="138dp"
+                    tools:layout_editor_absoluteY="16dp"
+                    tools:textSize="18sp"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="หมายเลขโทรศัพท์"
+                    app:layout_constraintStart_toStartOf="@+id/text_name_driv"
+                    app:layout_constraintTop_toBottomOf="@+id/text_name_driv"
+                    tools:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/text_numjob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="เลขที่งาน"
+                    app:layout_constraintEnd_toEndOf="@+id/textView7"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/textView7"
+                    app:layout_constraintTop_toBottomOf="@+id/textView7"
+                    tools:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:drawableLeft="@drawable/ic_add_location_black_24dp"
+                    android:text="จุดรับสินค้า"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="172dp"
+                    tools:ignore="MissingConstraints" />
+
+                <Button
+                    android:id="@+id/move"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:drawableLeft="@drawable/ic_add_location_black_24dp"
+
+                    android:text="ชื่อสถานที่"
+                    app:layout_constraintEnd_toEndOf="@+id/button"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/button"
+                    app:layout_constraintTop_toBottomOf="@+id/button" />
+
+                <Button
+                    android:id="@+id/btn_cf"
+                    android:layout_width="399dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="ยืนยันใช้งาน"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.483"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/text_price"
+                    android:layout_width="168dp"
+                    android:layout_height="37dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/colorPrimary"
+                    android:text="    เงินสด"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="417dp"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/text_pr_num"
+                    android:layout_width="131dp"
+                    android:layout_height="37dp"
+                    android:layout_marginEnd="92dp"
+                    android:layout_marginRight="92dp"
+                    android:background="@color/colorPrimary"
+                    android:text="    100"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:layout_editor_absoluteY="417dp"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="94dp"
+                    android:layout_height="37dp"
+                    android:background="@color/colorPrimary"
+                    android:text="บาท"
+                    app:layout_constraintBottom_toBottomOf="@+id/text_pr_num"
+                    app:layout_constraintTop_toTopOf="@+id/text_pr_num"
+                    tools:layout_editor_absoluteX="291dp"
+                    tools:ignore="MissingConstraints" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v7.widget.CardView>
+    </android.support.v4.widget.NestedScrollView>
+
+</FrameLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".User.ProfileFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark">
+
+            <EditText
+                android:id="@+id/text_p_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="ID :"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.503"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="232dp" />
+
+            <EditText
+                android:id="@+id/text_p_tell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="เบอร์โทรศัพท์ :"
+                app:layout_constraintEnd_toEndOf="@+id/text_p_name"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/text_p_name"
+                app:layout_constraintTop_toBottomOf="@+id/text_p_name" />
+
+            <EditText
+                android:id="@+id/text_p_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="ชื่อ :"
+                app:layout_constraintEnd_toEndOf="@+id/text_p_id"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/text_p_id"
+                app:layout_constraintTop_toBottomOf="@+id/text_p_id" />
+
+            <HorizontalScrollView
+                android:layout_width="403dp"
+                android:layout_height="144dp"
+                android:background="@color/colorAccent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" />
+            </HorizontalScrollView>
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="116dp"
+                tools:layout_editor_absoluteY="61dp"
+                tools:src="@tools:sample/avatars"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/text_p_mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="อีเมล"
+                app:layout_constraintEnd_toEndOf="@+id/text_p_tell"
+                app:layout_constraintStart_toStartOf="@+id/text_p_tell"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="369dp" />
+
+            <Button
+                android:id="@+id/btn_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="แก้ไข"
+                tools:layout_editor_absoluteX="148dp"
+                tools:layout_editor_absoluteY="446dp"
+                tools:ignore="MissingConstraints" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</FrameLayout>
