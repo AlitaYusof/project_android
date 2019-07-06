@@ -116,8 +116,7 @@
                     android:id="@+id/editText9"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginRight="8dp"
                     android:ems="10"
@@ -126,7 +125,7 @@
                     app:layout_constraintBottom_toBottomOf="@+id/text_icon"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/text_icon"
-                    app:layout_constraintTop_toTopOf="@+id/text_icon"
+                    app:layout_constraintTop_toBottomOf="@+id/textpoi2"
                     tools:ignore="MissingConstraints" />
 
                 <EditText
@@ -188,13 +187,12 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
                     android:background="@color/colorPrimary"
                     android:text="ยืนยัน"
-                    app:layout_constraintBottom_toBottomOf="@+id/button4"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/button4"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/button4"
-                    app:layout_constraintVertical_bias="0.0"
                     tools:ignore="MissingConstraints" />
 
                 <Button
@@ -205,12 +203,13 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
                     android:background="@color/colorPrimaryDark"
                     android:text="ยกเลิก"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/btn_cf_all"
-                    tools:ignore="MissingConstraints"
-                    tools:layout_editor_absoluteY="447dp" />
+                    tools:ignore="MissingConstraints" />
 
                 <TextView
                     android:id="@+id/text_icon"
