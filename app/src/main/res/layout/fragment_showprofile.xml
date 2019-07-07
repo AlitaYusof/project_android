@@ -41,23 +41,18 @@
                     android:id="@+id/text_name_driv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="56dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
                     android:text="ชื่อ"
-                    app:layout_constraintEnd_toEndOf="@+id/text_id_drive"
-                    app:layout_constraintStart_toStartOf="@+id/text_id_drive"
-                    app:layout_constraintTop_toBottomOf="@+id/text_id_drive"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.466"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
                     tools:textSize="18sp" />
 
-
-                <TextView
-                    android:id="@+id/text_id_drive"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="ID :"
-                    tools:layout_editor_absoluteX="138dp"
-                    tools:layout_editor_absoluteY="16dp"
-                    tools:textSize="18sp"
-                    tools:ignore="MissingConstraints" />
 
                 <TextView
                     android:id="@+id/textView7"
@@ -69,99 +64,17 @@
                     app:layout_constraintTop_toBottomOf="@+id/text_name_driv"
                     tools:textSize="18sp" />
 
-                <TextView
-                    android:id="@+id/text_numjob"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="เลขที่งาน"
-                    app:layout_constraintEnd_toEndOf="@+id/textView7"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/textView7"
-                    app:layout_constraintTop_toBottomOf="@+id/textView7"
-                    tools:textSize="18sp" />
-
-                <Button
-                    android:id="@+id/button"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
+                <com.google.android.gms.maps.MapView
+                    android:id="@+id/mapView3"
+                    android:layout_width="515dp"
+                    android:layout_height="221dp"
+                    android:layout_marginTop="28dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginRight="8dp"
-                    android:background="@color/colorPrimaryDark"
-                    android:drawableLeft="@drawable/ic_add_location_black_24dp"
-                    android:text="จุดรับสินค้า"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintHorizontal_bias="0.647"
                     app:layout_constraintStart_toStartOf="parent"
-                    tools:layout_editor_absoluteY="172dp"
-                    tools:ignore="MissingConstraints" />
-
-                <Button
-                    android:id="@+id/move"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
-                    android:background="@color/colorPrimaryDark"
-                    android:drawableLeft="@drawable/ic_add_location_black_24dp"
-
-                    android:text="ชื่อสถานที่"
-                    app:layout_constraintEnd_toEndOf="@+id/button"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/button"
-                    app:layout_constraintTop_toBottomOf="@+id/button" />
-
-                <Button
-                    android:id="@+id/btn_cf"
-                    android:layout_width="399dp"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:text="ยืนยันใช้งาน"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.483"
-                    app:layout_constraintStart_toStartOf="parent" />
-
-                <TextView
-                    android:id="@+id/text_price"
-                    android:layout_width="168dp"
-                    android:layout_height="37dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:background="@color/colorPrimary"
-                    android:text="    เงินสด"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    tools:layout_editor_absoluteY="417dp"
-                    tools:ignore="MissingConstraints" />
-
-                <TextView
-                    android:id="@+id/text_pr_num"
-                    android:layout_width="131dp"
-                    android:layout_height="37dp"
-                    android:layout_marginEnd="92dp"
-                    android:layout_marginRight="92dp"
-                    android:background="@color/colorPrimary"
-                    android:text="    100"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    tools:layout_editor_absoluteY="417dp"
-                    tools:ignore="MissingConstraints" />
-
-                <TextView
-                    android:id="@+id/textView17"
-                    android:layout_width="94dp"
-                    android:layout_height="37dp"
-                    android:background="@color/colorPrimary"
-                    android:text="บาท"
-                    app:layout_constraintBottom_toBottomOf="@+id/text_pr_num"
-                    app:layout_constraintTop_toTopOf="@+id/text_pr_num"
-                    tools:layout_editor_absoluteX="291dp"
-                    tools:ignore="MissingConstraints" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
             </android.support.constraint.ConstraintLayout>
 
