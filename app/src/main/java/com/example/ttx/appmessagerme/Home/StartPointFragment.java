@@ -2,13 +2,16 @@ package com.example.ttx.appmessagerme.Home;
 
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +20,12 @@ import android.widget.Toast;
 import com.example.ttx.appmessagerme.Model.Startpoint;
 import com.example.ttx.appmessagerme.R;
 import com.example.ttx.appmessagerme.databinding.FragmentStartPointBinding;
+import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
+import com.google.android.gms.common.GooglePlayServicesRepairableException;
+import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlacePicker;
+
+import static android.app.Activity.RESULT_OK;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -31,6 +39,7 @@ public class StartPointFragment extends Fragment {
     public static final String LOG_TAG = "PlacePicker";
     private static final int LOC_REQ_CODE = 1;
     private static final int PLACE_PICKER_REQ_CODE = 2;
+    private Place place;
 
     public StartPointFragment() {
         // Required empty public constructor
@@ -61,11 +70,11 @@ public class StartPointFragment extends Fragment {
     }
 
     private void getCurrentPlaceItems() {
-        if (isLocationAccessPermitted()) {
-            showPlacePicker();
-        } else {
-            requestLocationAccessPermission();
-        }
+//        if (isLocationAccessPermitted()) {
+        showPlacePicker();
+//        } else {
+//            requestLocationAccessPermission();
+//        }
     }
 
     private void requestLocationAccessPermission() {
@@ -76,13 +85,19 @@ public class StartPointFragment extends Fragment {
 
     private void showPlacePicker() {
         PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
+        try {
+            startActivityForResult(builder.build(context), PLACE_PICKER_REQ_CODE);
 
+        } catch (GooglePlayServicesRepairableException e) {
+            e.printStackTrace();
+        } catch (GooglePlayServicesNotAvailableException e) {
+            e.printStackTrace();
+        }
     }
 
     private boolean isLocationAccessPermitted() {
         if (ContextCompat.checkSelfPermission(context,
-                Manifest.permission.ACCESS_FINE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED) {
+                Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             return false;
         } else {
             return true;
@@ -119,5 +134,22 @@ public class StartPointFragment extends Fragment {
 
 
         return valid;
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == LOC_REQ_CODE) {
+            if (resultCode == RESULT_OK) {
+                showPlacePicker();
+            }
+        } else if (requestCode == PLACE_PICKER_REQ_CODE) {
+            if (resultCode == RESULT_OK) {
+//                Place place = PlacePicker.getPlace(data, context);
+
+                Toast.makeText(context, "PlacePicker Success", Toast.LENGTH_SHORT).show();
+                Log.d(LOG_TAG, " => ");
+
+            }
+        }
     }
 }
