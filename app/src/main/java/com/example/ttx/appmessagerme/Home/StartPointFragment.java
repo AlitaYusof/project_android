@@ -1,10 +1,14 @@
 package com.example.ttx.appmessagerme.Home;
 
 
+import android.Manifest;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +17,7 @@ import android.widget.Toast;
 import com.example.ttx.appmessagerme.Model.Startpoint;
 import com.example.ttx.appmessagerme.R;
 import com.example.ttx.appmessagerme.databinding.FragmentStartPointBinding;
+import com.google.android.gms.location.places.ui.PlacePicker;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -22,6 +27,10 @@ public class StartPointFragment extends Fragment {
     private Context context;
     private boolean valid;
     String showToast;
+
+    public static final String LOG_TAG = "PlacePicker";
+    private static final int LOC_REQ_CODE = 1;
+    private static final int PLACE_PICKER_REQ_CODE = 2;
 
     public StartPointFragment() {
         // Required empty public constructor
@@ -45,7 +54,39 @@ public class StartPointFragment extends Fragment {
                 }
             }
         });
+
+        getCurrentPlaceItems();
+
         return binding.getRoot();
+    }
+
+    private void getCurrentPlaceItems() {
+        if (isLocationAccessPermitted()) {
+            showPlacePicker();
+        } else {
+            requestLocationAccessPermission();
+        }
+    }
+
+    private void requestLocationAccessPermission() {
+        ActivityCompat.requestPermissions(getActivity(),
+                new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                LOC_REQ_CODE);
+    }
+
+    private void showPlacePicker() {
+        PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
+
+    }
+
+    private boolean isLocationAccessPermitted() {
+        if (ContextCompat.checkSelfPermission(context,
+                Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
     private boolean valid() {
@@ -79,5 +120,4 @@ public class StartPointFragment extends Fragment {
 
         return valid;
     }
-
 }
