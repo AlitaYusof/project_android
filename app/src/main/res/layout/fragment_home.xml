@@ -19,7 +19,8 @@
             <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorAccent">
+                android:background="@color/colorAccent"
+                tools:background="@color/colorAccent">
 
                 <Button
                     android:id="@+id/btn_startpoint"
@@ -93,9 +94,9 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginRight="8dp"
+                    android:buttonTint="@color/colorPrimary"
                     android:focusable="auto"
                     android:text="ไป - กลับ"
-                    android:buttonTint="@color/colorPrimary"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/btn_Entpoin" />
@@ -112,10 +113,10 @@
 
                 <CheckBox
                     android:id="@+id/chk_parcel"
-                    android:buttonTint="@color/colorPrimary"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:buttonTint="@color/colorPrimary"
                     android:text="พัสดุ"
                     app:layout_constraintStart_toStartOf="@+id/chk_peper"
                     app:layout_constraintTop_toBottomOf="@+id/chk_peper" />
@@ -124,8 +125,8 @@
                     android:id="@+id/chk_food"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:buttonTint="@color/colorPrimary"
                     android:layout_marginTop="8dp"
+                    android:buttonTint="@color/colorPrimary"
                     android:text="อาหาร"
                     app:layout_constraintStart_toStartOf="@+id/chk_parcel"
                     app:layout_constraintTop_toBottomOf="@+id/chk_parcel" />

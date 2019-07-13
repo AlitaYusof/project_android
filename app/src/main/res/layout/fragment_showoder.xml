@@ -68,8 +68,6 @@
                     android:id="@+id/textpoi2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginRight="8dp"
                     android:ems="10"
@@ -77,9 +75,10 @@
                     android:text="Name"
                     app:layout_constraintBottom_toBottomOf="@+id/textView_poi2"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/textpoi1"
                     app:layout_constraintTop_toTopOf="@+id/textView_poi2"
-                    app:layout_constraintVertical_bias="1.0"
+                    app:layout_constraintVertical_bias="0.444"
                     tools:ignore="MissingConstraints" />
 
                 <TextView
@@ -114,8 +113,6 @@
                     android:id="@+id/editText9"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginRight="8dp"
                     android:ems="10"
@@ -123,22 +120,23 @@
                     android:text="พัสดุ"
                     app:layout_constraintBottom_toBottomOf="@+id/text_icon"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="@+id/textpoi2"
                     app:layout_constraintTop_toTopOf="@+id/text_icon"
+                    app:layout_constraintVertical_bias="0.0"
                     tools:ignore="MissingConstraints" />
 
                 <EditText
                     android:id="@+id/editText10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
                     android:ems="10"
                     android:inputType="textPersonName"
                     android:text="เงินสด"
                     app:layout_constraintBottom_toBottomOf="@+id/text_icon2"
                     app:layout_constraintStart_toStartOf="@+id/editText9"
                     app:layout_constraintTop_toTopOf="@+id/text_icon2"
+                    app:layout_constraintVertical_bias="0.111"
                     tools:ignore="MissingConstraints" />
 
                 <EditText
@@ -209,10 +207,9 @@
                 <TextView
                     android:id="@+id/text_icon"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="15dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
-                    android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
                     android:text="ใส่icon"
                     app:layout_constraintBottom_toTopOf="@+id/text_icon2"
@@ -228,9 +225,9 @@
                     android:layout_marginBottom="8dp"
                     android:text="ใส่icon"
                     app:layout_constraintBottom_toTopOf="@+id/editText11"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/text_icon"
-                    tools:ignore="MissingConstraints"
-                    tools:layout_editor_absoluteX="8dp" />
+                    tools:ignore="MissingConstraints" />
             </android.support.constraint.ConstraintLayout>
         </android.support.v4.widget.NestedScrollView>
     </FrameLayout>
