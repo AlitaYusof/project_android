@@ -64,19 +64,119 @@
                     app:layout_constraintTop_toBottomOf="@+id/text_name_driv"
                     tools:textSize="18sp" />
 
-                <com.google.android.gms.maps.MapView
-                    android:id="@+id/mapView3"
-                    android:layout_width="515dp"
-                    android:layout_height="405dp"
+                <EditText
+                    android:id="@+id/editstart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginRight="8dp"
-                    android:layout_marginBottom="8dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="จุดที่1"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.647"
+                    app:layout_constraintHorizontal_bias="0.503"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editText5" />
+
+                <EditText
+                    android:id="@+id/editend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="จุดที่2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editstart" />
+
+                <EditText
+                    android:id="@+id/editText4"
+                    android:layout_width="179dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="time"
+                    android:text="เวลา"
+                    app:layout_constraintBottom_toBottomOf="@+id/editText5"
+                    app:layout_constraintTop_toTopOf="@+id/editText5"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:layout_editor_absoluteX="192dp" />
+
+                <EditText
+                    android:id="@+id/editText5"
+                    android:layout_width="177dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:ems="10"
+                    android:inputType="date"
+                    android:text="วัน เดือน ปี"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+                <EditText
+                    android:id="@+id/edit_price"
+                    android:layout_width="196dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="เงินสด"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/edit_cash"
+                    app:layout_constraintTop_toBottomOf="@+id/editText8" />
+
+                <EditText
+                    android:id="@+id/edit_cash"
+                    android:layout_width="164dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="สถานะการชำระเงิน"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editText13" />
+
+                <EditText
+                    android:id="@+id/editText8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="100 บาท"
+                    app:layout_constraintTop_toBottomOf="@+id/editend"
+                    tools:layout_editor_absoluteX="169dp" />
+
+                <EditText
+                    android:id="@+id/editText13"
+                    android:layout_width="117dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Name"
+                    app:layout_constraintEnd_toStartOf="@+id/editText8"
+                    app:layout_constraintTop_toBottomOf="@+id/editend" />
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ยกเลิก"
+                    tools:layout_editor_absoluteX="132dp"
+                    tools:layout_editor_absoluteY="446dp" />
 
             </android.support.constraint.ConstraintLayout>
 
