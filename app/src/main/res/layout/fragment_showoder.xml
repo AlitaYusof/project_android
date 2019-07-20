@@ -10,12 +10,12 @@
         tools:context=".Driver.ComfirmFragment">
 
 
-        <android.support.v4.widget.NestedScrollView
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fillViewport="true">
 
-            <android.support.constraint.ConstraintLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/text_time"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -232,8 +232,8 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/text_icon"
                     tools:ignore="MissingConstraints" />
-            </android.support.constraint.ConstraintLayout>
-        </android.support.v4.widget.NestedScrollView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
     </FrameLayout>
 
 
