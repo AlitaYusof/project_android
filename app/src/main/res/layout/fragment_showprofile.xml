@@ -65,33 +65,32 @@
                     tools:textSize="18sp" />
 
                 <EditText
-                    android:id="@+id/editstart"
+                    android:id="@+id/edit_startpoint"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="16dp"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:text="จุดที่1"
+                    android:text="ม.ราชภัฏ"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.503"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintHorizontal_bias="0.305"
+                    app:layout_constraintStart_toEndOf="@+id/textView_shstart"
                     app:layout_constraintTop_toBottomOf="@+id/editText5" />
 
                 <EditText
-                    android:id="@+id/editend"
+                    android:id="@+id/edit_shendpoint"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="16dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginRight="8dp"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:text="จุดที่2"
+                    android:text="ม.ทักษิน"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editstart" />
+                    app:layout_constraintHorizontal_bias="0.343"
+                    app:layout_constraintStart_toEndOf="@+id/textView_shend"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_startpoint" />
 
                 <EditText
                     android:id="@+id/editText4"
@@ -109,7 +108,9 @@
                     android:id="@+id/editText5"
                     android:layout_width="177dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
                     android:ems="10"
                     android:inputType="date"
                     android:text="วัน เดือน ปี"
@@ -120,55 +121,27 @@
                     android:id="@+id/edit_price"
                     android:layout_width="196dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
+                    android:layout_marginEnd="56dp"
+                    android:layout_marginRight="56dp"
                     android:ems="10"
                     android:inputType="textPersonName"
                     android:text="เงินสด"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toEndOf="@+id/edit_cash"
+                    app:layout_constraintHorizontal_bias="0.166"
+                    app:layout_constraintStart_toEndOf="@+id/textView_status"
                     app:layout_constraintTop_toBottomOf="@+id/editText8" />
-
-                <EditText
-                    android:id="@+id/edit_cash"
-                    android:layout_width="164dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginTop="8dp"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="สถานะการชำระเงิน"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editText13" />
 
                 <EditText
                     android:id="@+id/editText8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="12dp"
                     android:ems="10"
                     android:inputType="textPersonName"
                     android:text="100 บาท"
-                    app:layout_constraintTop_toBottomOf="@+id/editend"
-                    tools:layout_editor_absoluteX="169dp" />
-
-                <EditText
-                    android:id="@+id/editText13"
-                    android:layout_width="117dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginRight="16dp"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="Name"
-                    app:layout_constraintEnd_toStartOf="@+id/editText8"
-                    app:layout_constraintTop_toBottomOf="@+id/editend" />
+                    app:layout_constraintEnd_toEndOf="@+id/edit_shendpoint"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_shendpoint" />
 
                 <Button
                     android:id="@+id/btn_cancel"
@@ -177,6 +150,46 @@
                     android:text="ยกเลิก"
                     tools:layout_editor_absoluteX="132dp"
                     tools:layout_editor_absoluteY="446dp" />
+
+                <TextView
+                    android:id="@+id/textView_shstart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="จุดต้นทาง"
+                    tools:layout_editor_absoluteX="33dp"
+                    tools:layout_editor_absoluteY="221dp" />
+
+                <TextView
+                    android:id="@+id/textView_shend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:text="จุดปลายทาง"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_shstart"
+                    tools:layout_editor_absoluteX="20dp" />
+
+                <TextView
+                    android:id="@+id/textView_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="36dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="ราคา"
+                    app:layout_constraintEnd_toStartOf="@+id/editText8"
+                    app:layout_constraintHorizontal_bias="0.348"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_shend" />
+
+                <TextView
+                    android:id="@+id/textView_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="สถานะการชำระ"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="389dp" />
 
             </android.support.constraint.ConstraintLayout>
 

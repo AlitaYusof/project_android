@@ -20,65 +20,22 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <EditText
-                android:id="@+id/edit_nameent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="ชื่อสถานที่"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.503"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="248dp" />
-
-            <EditText
-                android:id="@+id/edit_lat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:ems="10"
-                android:inputType="number|textPersonName"
-                android:text="10.1531"
-                app:layout_constraintStart_toStartOf="@+id/edit_nameent"
-                app:layout_constraintTop_toBottomOf="@+id/edit_nameent" />
-
-            <EditText
-                android:id="@+id/edit_long"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:ems="10"
-                android:inputType="number|textPersonName"
-                android:text="153.100581"
-                app:layout_constraintStart_toStartOf="@+id/edit_lat"
-                app:layout_constraintTop_toBottomOf="@+id/edit_lat" />
-
             <Button
                 android:id="@+id/btn_submit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:text="ตกลง"
-                app:layout_constraintEnd_toEndOf="@+id/edit_long"
-                app:layout_constraintStart_toStartOf="@+id/edit_long"
-                app:layout_constraintTop_toBottomOf="@+id/edit_long" />
+                android:text="ยืนยันจุดนี้"
+                tools:layout_editor_absoluteX="149dp"
+                tools:layout_editor_absoluteY="434dp" />
 
             <com.google.android.gms.maps.MapView
                 android:id="@+id/mapView2"
                 android:layout_width="391dp"
                 android:layout_height="202dp"
-                android:layout_marginBottom="8dp"
-                app:layout_constraintBottom_toTopOf="@+id/edit_nameent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintTop_toTopOf="parent" />
         </android.support.constraint.ConstraintLayout>
     </FrameLayout>
 </layout>
