@@ -30,6 +30,10 @@ import com.example.ttx.appmessagerme.Model.Endpoint;
 import com.example.ttx.appmessagerme.R;
 import com.example.ttx.appmessagerme.Utility;
 import com.example.ttx.appmessagerme.databinding.FragmentEndPointBinding;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
+import com.google.android.gms.common.GooglePlayServicesRepairableException;
+import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
@@ -38,6 +42,9 @@ import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.location.LocationSettingsRequest;
 import com.google.android.gms.location.LocationSettingsResponse;
 import com.google.android.gms.location.SettingsClient;
+import com.google.android.gms.location.places.Place;
+import com.google.android.gms.location.places.Places;
+import com.google.android.gms.location.places.ui.PlacePicker;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -53,11 +60,13 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.snackbar.Snackbar;
 
+import static android.app.Activity.RESULT_CANCELED;
 import static android.app.Activity.RESULT_OK;
 import static com.example.ttx.appmessagerme.Home.StartPointFragment.LOG_TAG;
 
-public class EndPointFragment extends Fragment implements OnMapReadyCallback, GoogleMap.OnMapClickListener {
+public class EndPointFragment extends Fragment implements OnMapReadyCallback, GoogleMap.OnMapClickListener, GoogleApiClient.OnConnectionFailedListener {
     private FragmentEndPointBinding binding;
     private Context context;
     private boolean valid;
@@ -69,6 +78,9 @@ public class EndPointFragment extends Fragment implements OnMapReadyCallback, Go
     private float DEFAULT_ZOOM = 15;
     private MapView mMapView;
     private int container_height;
+    private final static int PLACE_PICKER_REQUEST = 1;
+
+    private GoogleApiClient mGoogleApiClient;
 
     public EndPointFragment() {
         // Required empty public constructor
@@ -87,23 +99,59 @@ public class EndPointFragment extends Fragment implements OnMapReadyCallback, Go
 
         mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(context);
 
-
+        PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
+        mGoogleApiClient = new GoogleApiClient
+                .Builder(context)
+                .addApi(Places.GEO_DATA_API)
+                .addApi(Places.PLACE_DETECTION_API)
+                .enableAutoManage(getActivity(), this)
+                .build();
         binding.btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                getActivity().onBackPressed();
+                try {
+                    Intent intent = builder.build(getActivity());
+                    startActivityForResult(intent, PLACE_PICKER_REQUEST);
+                } catch (GooglePlayServicesRepairableException e) {
+                    e.printStackTrace();
+                } catch (GooglePlayServicesNotAvailableException e) {
+                    e.printStackTrace();
+                }
+
+//                getActivity().onBackPressed();
 
             }
         });
         return binding.getRoot();
     }
+    @Override
+    public void onStart() {
+        super.onStart();
+        mGoogleApiClient.connect();
+    }
 
+    @Override
+    public void onStop() {
+        mGoogleApiClient.disconnect();
+        super.onStop();
+    }
     @Override
     public void onResume() {
         super.onResume();
         mMapView.onResume();
 
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode == RESULT_OK) {
+            Place place = PlacePicker.getPlace(context, data);
+            Toast.makeText(context, place.getName(), Toast.LENGTH_LONG).show();
+        }  else if (resultCode == RESULT_CANCELED) {
+            Toast.makeText(context, "No place selected", Toast.LENGTH_LONG).show();
+
+        }
     }
 
     @Override
@@ -128,5 +176,10 @@ public class EndPointFragment extends Fragment implements OnMapReadyCallback, Go
         startpoint.setLat(latLng1.latitude);
         startpoint.setLog(latLng1.longitude);
         mMap.addMarker(new MarkerOptions().position(latLng1).title(nameTitle));
+    }
+
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+        Snackbar.make(binding.getRoot(), connectionResult.getErrorMessage() + "", Snackbar.LENGTH_LONG).show();
     }
 }
