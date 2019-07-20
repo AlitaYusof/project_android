@@ -7,20 +7,16 @@
     tools:context=".Driver.ShowprofileFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <android.support.v4.widget.NestedScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true">
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/carddri"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="@color/colorAccent">
-
-            <android.support.constraint.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            android:background="@color/colorAccent"
+            tools:background="@color/colorAccent">
 
                 <ImageView
                     android:id="@+id/imageView"
@@ -75,7 +71,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.305"
                     app:layout_constraintStart_toEndOf="@+id/textView_shstart"
-                    app:layout_constraintTop_toBottomOf="@+id/editText5" />
+                    app:layout_constraintTop_toBottomOf="@+id/edit_dateoder" />
 
                 <EditText
                     android:id="@+id/edit_shendpoint"
@@ -92,45 +88,45 @@
                     app:layout_constraintStart_toEndOf="@+id/textView_shend"
                     app:layout_constraintTop_toBottomOf="@+id/edit_startpoint" />
 
-                <EditText
-                    android:id="@+id/editText4"
-                    android:layout_width="179dp"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="time"
-                    android:text="เวลา"
-                    app:layout_constraintBottom_toBottomOf="@+id/editText5"
-                    app:layout_constraintTop_toTopOf="@+id/editText5"
-                    app:layout_constraintVertical_bias="0.0"
-                    tools:layout_editor_absoluteX="192dp" />
+            <EditText
+                android:id="@+id/edit_timeoder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="time"
+                android:text="เวลา"
+                app:layout_constraintBottom_toBottomOf="@+id/edit_dateoder"
+                app:layout_constraintTop_toTopOf="@+id/edit_dateoder"
+                app:layout_constraintVertical_bias="0.0"
+                tools:layout_editor_absoluteX="192dp" />
 
-                <EditText
-                    android:id="@+id/editText5"
-                    android:layout_width="177dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginTop="24dp"
-                    android:ems="10"
-                    android:inputType="date"
-                    android:text="วัน เดือน ปี"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView7" />
+            <EditText
+                android:id="@+id/edit_dateoder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="24dp"
+                android:ems="10"
+                android:inputType="date"
+                android:text="วัน เดือน ปี"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
-                <EditText
-                    android:id="@+id/edit_price"
-                    android:layout_width="196dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="56dp"
-                    android:layout_marginRight="56dp"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="เงินสด"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.166"
-                    app:layout_constraintStart_toEndOf="@+id/textView_status"
-                    app:layout_constraintTop_toBottomOf="@+id/editText8" />
+            <EditText
+                android:id="@+id/edit_price"
+                android:layout_width="196dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="56dp"
+                android:layout_marginRight="56dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="เงินสด"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.318"
+                app:layout_constraintStart_toEndOf="@+id/textView_status"
+                app:layout_constraintTop_toBottomOf="@+id/editText8" />
 
                 <EditText
                     android:id="@+id/editText8"
@@ -154,10 +150,10 @@
                 <TextView
                     android:id="@+id/textView_shstart"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="18dp"
                     android:text="จุดต้นทาง"
-                    tools:layout_editor_absoluteX="33dp"
-                    tools:layout_editor_absoluteY="221dp" />
+                    tools:layout_editor_absoluteX="36dp"
+                    tools:layout_editor_absoluteY="218dp" />
 
                 <TextView
                     android:id="@+id/textView_shend"
@@ -191,9 +187,6 @@
                     tools:layout_editor_absoluteX="16dp"
                     tools:layout_editor_absoluteY="389dp" />
 
-            </android.support.constraint.ConstraintLayout>
-
-        </android.support.v7.widget.CardView>
-    </android.support.v4.widget.NestedScrollView>
-
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 </FrameLayout>
