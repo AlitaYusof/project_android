@@ -48,28 +48,6 @@ public class EndPointFragment extends Fragment {
 
         Endpoint endpoint = new Endpoint();
 
-        String sNamePoint = binding.editNameent.getText().toString();
-        String sLat = binding.editLat.getText().toString();
-        String sLong = binding.editLong.getText().toString();
-
-        if (sNamePoint.isEmpty()) {
-            valid = false;
-            showToast = "sNamePoint.isEmpty";
-        } else {
-            endpoint.setNamepoit(sNamePoint);
-        }
-        if (sLat.isEmpty()) {
-            valid = false;
-            showToast = "sLat.isEmpty";
-        } else {
-            endpoint.setLat(Double.parseDouble(sLat));
-        }
-        if (sLong.isEmpty()) {
-            valid = false;
-            showToast = "sLong.isEmpty";
-        } else {
-            endpoint.setLog(Double.parseDouble(sLong));
-        }
 
         return valid;
     }

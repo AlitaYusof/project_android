@@ -132,29 +132,7 @@ public class StartPointFragment extends Fragment {
 
         Startpoint startpoint = new Startpoint();
 
-        String sNamePoint = binding.editNamestart.getText().toString();
-        String sLat = binding.editLat.getText().toString();
-        String sLong = binding.editLong.getText().toString();
-
-        if (sNamePoint.isEmpty()) {
-            valid = false;
-            showToast = "sNamePoint.isEmpty";
-        } else {
-            startpoint.setNamepoit(sNamePoint);
-        }
-        if (sLat.isEmpty()) {
-            valid = false;
-            showToast = "sLat.isEmpty";
-        } else {
-            startpoint.setLat(Double.parseDouble(sLat));
-        }
-        if (sLong.isEmpty()) {
-            valid = false;
-            showToast = "sLong.isEmpty";
-        } else {
-            startpoint.setLog(Double.parseDouble(sLong));
-        }
-
+     
 
         return valid;
     }

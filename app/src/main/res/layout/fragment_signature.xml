@@ -23,23 +23,23 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:id="@+id/ิbtn_savesig"
+                android:id="@+id/btn_savesig"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="68dp"
                 android:layout_marginLeft="68dp"
                 android:text="บันทึก"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/ิbtn_deletesig" />
+                app:layout_constraintTop_toTopOf="@+id/btn_deletesig" />
 
             <Button
-                android:id="@+id/ิbtn_deletesig"
+                android:id="@+id/btn_deletesig"
                 android:layout_width="wrap_content"
                 android:layout_height="46dp"
                 android:layout_marginStart="88dp"
                 android:layout_marginLeft="88dp"
                 android:text="ยกเลิก"
-                app:layout_constraintStart_toEndOf="@+id/ิbtn_savesig"
+                app:layout_constraintStart_toEndOf="@+id/btn_savesig"
                 tools:layout_editor_absoluteY="375dp" />
 
             <Button
@@ -51,7 +51,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.456"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ิbtn_deletesig" />
+                app:layout_constraintTop_toBottomOf="@+id/btn_deletesig" />
 
             <TextView
                 android:id="@+id/text_signature"
