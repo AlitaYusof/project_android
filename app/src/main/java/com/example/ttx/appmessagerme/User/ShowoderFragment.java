@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.ttx.appmessagerme.Driver.ComfirmFragment;
+import com.example.ttx.appmessagerme.Driver.ConfirmFragment;
 import com.example.ttx.appmessagerme.R;
 import com.example.ttx.appmessagerme.databinding.FragmentShowoderBinding;
 
@@ -38,7 +38,7 @@ public class ShowoderFragment extends Fragment {
             public void onClick(View v) {
                 ((AppCompatActivity) getContext()).getSupportFragmentManager()
                         .beginTransaction()
-                        .replace(R.id.container, new ComfirmFragment())
+                        .replace(R.id.container, new ConfirmFragment())
                         .addToBackStack(null) //เก็บค่าก่อนหน้าเพื่อย้อนกลับ
                         .commit();
             }

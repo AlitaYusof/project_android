@@ -8,8 +8,8 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <android.support.v4.widget.NestedScrollView
-        android:layout_width="430dp"
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
@@ -18,7 +18,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <android.support.constraint.ConstraintLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -26,9 +26,8 @@
                 android:id="@+id/btn_savesig"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="68dp"
-                android:layout_marginLeft="68dp"
                 android:text="บันทึก"
+                app:layout_constraintEnd_toStartOf="@+id/btn_deletesig"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/btn_deletesig" />
 
@@ -36,11 +35,11 @@
                 android:id="@+id/btn_deletesig"
                 android:layout_width="wrap_content"
                 android:layout_height="46dp"
-                android:layout_marginStart="88dp"
-                android:layout_marginLeft="88dp"
+                android:layout_marginTop="208dp"
                 android:text="ยกเลิก"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/btn_savesig"
-                tools:layout_editor_absoluteY="375dp" />
+                app:layout_constraintTop_toBottomOf="@+id/text_signature" />
 
             <Button
                 android:id="@+id/button7"
@@ -57,10 +56,12 @@
                 android:id="@+id/text_signature"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="172dp"
                 android:text="ลายเซ็นต์"
-                tools:layout_editor_absoluteX="145dp"
-                tools:layout_editor_absoluteY="172dp" />
-        </android.support.constraint.ConstraintLayout>
-    </android.support.v4.widget.NestedScrollView>
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 
 </FrameLayout>

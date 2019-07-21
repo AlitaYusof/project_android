@@ -18,12 +18,12 @@ import com.example.ttx.appmessagerme.databinding.FragmentComfirmBinding;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ComfirmFragment extends Fragment {
+public class ConfirmFragment extends Fragment {
     private FragmentComfirmBinding binding;
     private RecyclerView recyclerView;
     private Context context;
     String[] strings = {"A", "B", "C"}; //ข้อความอะไรก็ได้
-    public ComfirmFragment() {
+    public ConfirmFragment() {
         // Required empty public constructor
     }
 

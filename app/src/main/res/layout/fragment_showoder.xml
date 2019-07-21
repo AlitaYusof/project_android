@@ -7,7 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorAccent"
-        tools:context=".Driver.ComfirmFragment">
+        tools:context=".Driver.ConfirmFragment">
 
 
         <androidx.core.widget.NestedScrollView
